@@ -21,7 +21,12 @@
 - [2024/10] Both Interactive Region Detection Model and Icon functional description model are released! [Hugginface models](https://huggingface.co/microsoft/OmniParser)
 - [2024/09] OmniParser achieves the best performance on [Windows Agent Arena](https://microsoft.github.io/WindowsAgentArena/)! 
 
-## Install 
+## Install
+PreRequest:
+Nvidia CUDA installed
+Conda installed
+pytroch (version match nvidia cuda) installed 
+
 First clone the repo, and then install environment:
 ```python
 cd OmniParser
@@ -53,6 +58,10 @@ download 'model_v1_5.pt' from https://huggingface.co/microsoft/OmniParser/tree/m
 We put together a few simple examples in the demo.ipynb. 
 
 ## Gradio Demo
+Check your cuda is ok, or it will use CPU instead of GPU.
+```python
+python test_cuda.py
+```
 To run gradio demo, simply run:
 ```python
 python gradio_demo.py
